@@ -16,7 +16,7 @@ class Layout extends Component {
             menu: !this.state.menu
         })
     };
-    menuCloseHandler = () =>{
+    menuCloseHandler = () => {
         this.setState({
             menu: false
         })
@@ -43,6 +43,7 @@ class Layout extends Component {
         )
     }
 }
+
 function mapStateToProps(state) {
     return {
         isAuthenticated: !!state.auth.token
