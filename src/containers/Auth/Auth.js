@@ -44,7 +44,7 @@ class Auth extends React.Component {
     }
 
 
-    loginHandler =  () => {
+    loginHandler = () => {
         this.props.auth(
             this.state.formControls.email.value,
             this.state.formControls.password.value,
@@ -52,7 +52,7 @@ class Auth extends React.Component {
         )
 
     };
-    registerHandler =  () => {
+    registerHandler = () => {
         this.props.auth(
             this.state.formControls.email.value,
             this.state.formControls.password.value,
@@ -101,7 +101,7 @@ class Auth extends React.Component {
 
         let isFormValid = true
 
-        Object.keys(formControls).forEach(name=>{
+        Object.keys(formControls).forEach(name => {
             isFormValid = formControls[name].valid && isFormValid
         })
 
@@ -162,8 +162,8 @@ class Auth extends React.Component {
 
 function mapDispatchToProps(dispatch) {
     return {
-        auth: (email,password, isLogin) => dispatch(auth(email,password, isLogin))
+        auth: (email, password, isLogin) => dispatch(auth(email, password, isLogin))
     }
 }
 
-export default connect(null,mapDispatchToProps)(Auth);
+export default connect(null, mapDispatchToProps)(Auth);
